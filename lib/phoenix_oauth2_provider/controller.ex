@@ -38,7 +38,7 @@ defmodule PhoenixOauth2Provider.Controller do
   end
 
   defp put_layout(conn, nil) do
-    ["Endpoint" | web_context] =
+    [_ | web_context] =
       conn
       |> Phoenix.Controller.endpoint_module()
       |> Module.split()
